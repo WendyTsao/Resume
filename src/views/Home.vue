@@ -204,7 +204,10 @@
           <h4>- 實作切版學習，靈活運用前端框架 -</h4>
         </div>
         <div class="row">
-          <div class="portfolio-item col-lg-4">
+          <Graphic v-for="programmingGraphic in programmingGraphicItem" 
+          :content="programmingGraphic"
+          :key="programmingGraphic.imgUrl"></Graphic>
+          <!-- <div class="portfolio-item col-lg-4">
             <img src="../assets/pic/VuePracticeBootstrap.png" />
             <div class="text">
               <h3>VUE PRACTICE</h3>
@@ -224,7 +227,7 @@
               <h3>VUE PRACTICE</h3>
               <h3>Resume</h3>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="portfolio-design">
@@ -232,7 +235,10 @@
           <h4>- 嘗試繪製前端介面，享受設計的快樂 -</h4>
         </div>
         <div class="row">
-          <div class="portfolio-item col-lg-4">
+          <Graphic v-for="designGraphic in designGraphicItem" 
+          :content="designGraphic"
+          :key="designGraphic.imgUrl"></Graphic>
+          <!-- <div class="portfolio-item col-lg-4">
             <img src="../assets/pic/DailyUIDesktop001.jpg" />
             <div class="text">
               <h3>Daily UI 001</h3>
@@ -253,8 +259,6 @@
               <h3>TV APP</h3>
             </div>
           </div>
-        </div>
-        <div class="row">
           <div class="portfolio-item col-lg-4">
             <img src="../assets/pic/DailyUIMobile015.jpg" />
             <div class="text">
@@ -275,7 +279,7 @@
               <h3>Daily UI 024</h3>
               <h3>BOARDING PASS</h3>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -294,12 +298,62 @@
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import Graphic from '../components/Graphic.vue';
 
 export default {
-  name: "Home",
-  components: {
-    HelloWorld,
-  },
+  components: { Graphic, },
+  setup(){
+    const programmingGraphicItem = [
+      {
+        imgUrl: "VuePracticeBootstrap.png",
+        title: "VUE PRACTICE",
+        subTitle: "Bootstrap Theme",
+      },
+      {
+        imgUrl: "VuePractice5xRuby.png",
+        title: "VUE PRACTICE",
+        subTitle: "五倍紅寶石官網",
+      },
+      {
+        imgUrl: "VuePracticeResume.png",
+        title: "VUE PRACTICE",
+        subTitle: "Resume",
+      }
+    ];
+    
+    const designGraphicItem = [
+      {
+        imgUrl: "DailyUIDesktop001.jpg",
+        title: "Daily UI 001",
+        subTitle: "SIGN UP",
+      },
+      {
+        imgUrl: "DailyUIDesktop017.jpg",
+        title: "Daily UI 017",
+        subTitle: "EMAIL RECEIPT",
+      },
+      {
+        imgUrl: "DailyUIDesktop025.jpg",
+        title: "Daily UI 025",
+        subTitle: "TV APP",
+      },
+      {
+        imgUrl: "DailyUIMobile015.jpg",
+        title: "Daily UI 015",
+        subTitle: "ON/OFF SWITCH",
+      },
+      {
+        imgUrl: "DailyUIMobile023.jpg",
+        title: "Daily UI 023",
+        subTitle: "ONBOARDING",
+      },
+      {
+        imgUrl: "DailyUIMobile024.jpg",
+        title: "Daily UI 024",
+        subTitle: "BOARDING PASS",
+      }
+    ]
+    return { programmingGraphicItem, designGraphicItem };
+  }
 };
 </script>
