@@ -203,27 +203,6 @@
           <Graphic v-for="programmingGraphic in programmingGraphicItem" 
           :content="programmingGraphic"
           :key="programmingGraphic.imgUrl"></Graphic>
-          <!-- <div class="portfolio-item col-lg-4">
-            <img src="../assets/pic/VuePracticeBootstrap.png" />
-            <div class="text">
-              <h3>VUE PRACTICE</h3>
-              <h3>Bootstrap Theme</h3>
-            </div>
-          </div>
-          <div class="portfolio-item col-lg-4">
-            <img src="../assets/pic/VuePractice5xRuby.png" />
-            <div class="text">
-              <h3>VUE PRACTICE</h3>
-              <h3>五倍紅寶石官網</h3>
-            </div>
-          </div>
-          <div class="portfolio-item col-lg-4">
-            <img src="../assets/pic/VuePracticeResume.png" />
-            <div class="text">
-              <h3>VUE PRACTICE</h3>
-              <h3>Resume</h3>
-            </div>
-          </div> -->
         </div>
       </div>
       <div class="portfolio-design">
@@ -234,48 +213,6 @@
           <Graphic v-for="designGraphic in designGraphicItem" 
           :content="designGraphic"
           :key="designGraphic.imgUrl"></Graphic>
-          <!-- <div class="portfolio-item col-lg-4">
-            <img src="../assets/pic/DailyUIDesktop001.jpg" />
-            <div class="text">
-              <h3>Daily UI 001</h3>
-              <h3>SIGN UP</h3>
-            </div>
-          </div>
-          <div class="portfolio-item col-lg-4">
-            <img src="../assets/pic/DailyUIDesktop017.jpg" />
-            <div class="text">
-              <h3>Daily UI 017</h3>
-              <h3>EMAIL RECEIPT</h3>
-            </div>
-          </div>
-          <div class="portfolio-item col-lg-4">
-            <img src="../assets/pic/DailyUIDesktop025.jpg" />
-            <div class="text">
-              <h3>Daily UI 025</h3>
-              <h3>TV APP</h3>
-            </div>
-          </div>
-          <div class="portfolio-item col-lg-4">
-            <img src="../assets/pic/DailyUIMobile015.jpg" />
-            <div class="text">
-              <h3>Daily UI 015</h3>
-              <h3>ON/OFF SWITCH</h3>
-            </div>
-          </div>
-          <div class="portfolio-item col-lg-4">
-            <img src="../assets/pic/DailyUIMobile023.jpg" />
-            <div class="text">
-              <h3>Daily UI 023</h3>
-              <h3>ONBOARDING</h3>
-            </div>
-          </div>
-          <div class="portfolio-item col-lg-4">
-            <img src="../assets/pic/DailyUIMobile024.jpg" />
-            <div class="text">
-              <h3>Daily UI 024</h3>
-              <h3>BOARDING PASS</h3>
-            </div>
-          </div> -->
         </div>
       </div>
     </div>
