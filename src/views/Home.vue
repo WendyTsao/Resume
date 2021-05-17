@@ -99,33 +99,20 @@
     <div class="container">
       <div class="content col-10 mx-auto">
         <div class="row py-5">
-          <div class="col-sm-6">
-            <div class="card">
-              <div class="card-body programming-skill text">
-                <h4>PROGRAMMING</h4>
-                <ul class="d-flex flex-wrap">
-                  <li class="skill-list">HTML5</li>
-                  <li class="skill-list">JavaScript</li>
-                  <li class="skill-list">CSS</li>
-                  <li class="skill-list">Vue</li>
-                  <li class="skill-list">Bootstrap</li>
-                  <li class="skill-list">Git & Github</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="card">
-              <div class="card-body design-skill text">
-                <h4>DESIGN</h4>
-                <ul class="d-flex flex-column align-items-center">
-                  <li class="skill-list">Photoshop</li>
-                  <li class="skill-list">Illustrator</li>
-                  <li class="skill-list">InDesign</li>
-                </ul>
-              </div>
-            </div>
-          </div>
+          <CardList :title="'PROGRAMMING'">
+              <ul class="d-flex flex-wrap">
+                <li v-for="item in skillProgrammingItems" class="skill-list" :key="item.programmingSkill">
+                  {{ item.programmingSkill }}
+                </li>
+              </ul>
+          </CardList>
+          <CardList :title="'DESIGN'">
+              <ul class="d-flex flex-column align-items-center">
+                <li v-for="item in skillDesignItems" class="skill-list" :key="item.skillDesignItems">
+                  {{ item.designSkill }}
+                </li>
+              </ul>
+          </CardList>
         </div>
       </div>
     </div>
@@ -231,11 +218,12 @@
 
 <script>
 // @ is an alias to /src
+import CardList from '../components/CardList.vue';
 import Graphic from '../components/Graphic.vue';
 import { ref } from '@vue/reactivity';
 
 export default {
-  components: { Graphic },
+  components: { Graphic, CardList, },
   setup(){
     const programmingGraphicItem = [
       {
@@ -288,13 +276,27 @@ export default {
       }
     ];
 
+    const skillProgrammingItems = [
+      { programmingSkill: "HTML5" },
+      { programmingSkill: "JavaScript" },
+      { programmingSkill: "CSS" },
+      { programmingSkill: "VUE" },
+      { programmingSkill: "Bootstrap" },
+      { programmingSkill: "Git & Github" },
+    ];
+
+    const skillDesignItems = [
+      { designSkill: "Photoshop" },
+      { designSkill: "Illustrator" },
+      { designSkill: "InDesign" },
+    ];
 
     const isShow = ref(true);
     const ContentToggle = ()=>{
       isShow.value = !isShow.value
     }
 
-    return { programmingGraphicItem, designGraphicItem, isShow, ContentToggle };
+    return { programmingGraphicItem, designGraphicItem, skillProgrammingItems, skillDesignItems, isShow, ContentToggle };
   }
 };
 </script>
