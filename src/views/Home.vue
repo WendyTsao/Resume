@@ -206,24 +206,20 @@
   </div>
 
   <!-- 頁尾區塊 -->
-  <div class="container-fluid footer">
+  <Footer>
     &copy; copyright 2021 by Wendy
-    <div class="portfolioLink">
-      <a href="#"><i class="fab fa-github-alt"></i></a>
-      <a href="#"><i class="fab fa-codepen"></i></a>
-      <a href="#"><i class="fas fa-envelope"></i></a>
-    </div>
-  </div>
+  </Footer>
 </template>
 
 <script>
 // @ is an alias to /src
+import Footer from "../components/Footer.vue";
 import CardList from '../components/CardList.vue';
 import Graphic from '../components/Graphic.vue';
 import { ref } from '@vue/reactivity';
 
 export default {
-  components: { Graphic, CardList, },
+  components: { Graphic, CardList, Footer },
   setup(){
     const programmingGraphicItem = [
       {
