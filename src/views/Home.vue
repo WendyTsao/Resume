@@ -71,24 +71,22 @@
           <p>
             熱心公益、關心周遭瑣碎事物且心思縝密，善於溝通及團隊合作，喜歡從合作的過程中彼此交流對於事情不同的想法，並可在扮演不同角色中學習應對事情的不同角度。
           </p>
-          <div class="tag" @click="ContentToggle">
-            <span class="badge rounded-pill">
-              踏入前端世界的女孩做了什麼準備
-              <i class="far fa-hand-point-right"></i>
-            </span>
-          </div>
+          <ToggleButton :title="'踏入前端世界的女孩做了什麼準備'"  @click="ContentToggle">
+            <template v-slot:icon-right>
+               <i class="far fa-hand-point-right"></i>
+            </template>
+          </ToggleButton>
         </div>
         <div v-else class="text study d-flex flex-column">
             <h4>精進成長 • 學習不中斷</h4>
             <p>下定決心從平面設計轉職成前端設計時，我就開始尋找相關實體/線上課程進修：學習基礎的網頁語法 - HTML、CSS、jQuery，實作切版畫面(含RWD)搭配網頁動畫以及靈活運用線上開源套件。
             </p>
             <p>除了課堂上的學習，我也會搭配線上教學影片自行練習，讓學習更有效率。目前也仍持續在學習前端框架 Vue 和 CSS切版等相關知識。</p>
-            <div class="tag" @click="ContentToggle">
-              <span class="badge rounded-pill">
-                  <i class="far fa-hand-point-left"></i>
-                  認識這個女孩
-              </span>
-            </div>
+          <ToggleButton :title="'認識這個女孩'"  @click="ContentToggle">
+            <template v-slot:icon-right>
+              <i class="far fa-hand-point-left"></i>
+            </template>
+          </ToggleButton>
         </div>
       </div>
     </div>
@@ -216,10 +214,12 @@
 import Footer from "../components/Footer.vue";
 import CardList from '../components/CardList.vue';
 import Graphic from '../components/Graphic.vue';
+import ToggleButton from '../components/ToggleButton.vue';
+
 import { ref } from '@vue/reactivity';
 
 export default {
-  components: { Graphic, CardList, Footer },
+  components: { Graphic, CardList, Footer, ToggleButton },
   setup(){
     const programmingGraphicItem = [
       {
