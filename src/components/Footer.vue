@@ -1,9 +1,8 @@
 <template>
   <div class="container-fluid footer">
-    <slot></slot>
+    &copy; copyright 2021 by Wendy
     <div class="portfolioLink">
-      <a v-for="link in portfolioLink" :key="link.iconLink"
-        :href="link.iconLink">
+      <a v-for="link in portfolioLink" :key="link.iconLink" :href="link.iconLink" >
         <i :class="link.iconClass"></i>
       </a>
     </div>
@@ -14,9 +13,9 @@
 export default {
   setup() {
     const portfolioLink = [
-      { iconLink: "#", iconClass: "fab fa-github-alt" },
-      { iconLink: "#", iconClass: "fab fa-codepen" },
-      { iconLink: "#", iconClass: "fas fa-envelope" },
+      { iconLink: "https://hackmd.io/?nav=overview", iconClass: "fas fa-file-alt" },
+      { iconLink: "https://github.com/WendyTsao", iconClass: "fab fa-github-alt" },
+      { iconLink: "mailto:wendytsao84@gmail.com", iconClass: "fas fa-envelope" },
     ];
 
     return { portfolioLink };
