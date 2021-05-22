@@ -72,7 +72,7 @@
             熱心公益、關心周遭瑣碎事物且心思縝密，善於溝通及團隊合作，喜歡從合作的過程中彼此交流對於事情不同的想法，並可在扮演不同角色中學習應對事情的不同角度。
           </p>
           <ToggleButton :title="'踏入前端世界的女孩做了什麼準備'"  @click="ContentToggle">
-            <template v-slot:icon-right>
+            <template #icon-right>
                <i class="far fa-hand-point-right"></i>
             </template>
           </ToggleButton>
@@ -83,7 +83,7 @@
             </p>
             <p>除了課堂上的學習，我也會搭配線上教學影片自行練習，讓學習更有效率。目前也仍持續在學習前端框架 Vue 和 CSS切版等相關知識。</p>
           <ToggleButton :title="'認識這個女孩'"  @click="ContentToggle">
-            <template v-slot:icon-right>
+            <template #icon-right>
               <i class="far fa-hand-point-left"></i>
             </template>
           </ToggleButton>
@@ -106,7 +106,7 @@
           </CardList>
           <CardList :title="'DESIGN'">
               <ul class="d-flex flex-column align-items-center">
-                <li v-for="item in skillDesignItems" class="skill-list" :key="item.skillDesignItems">
+                <li v-for="item in skillDesignItems" class="skill-list" :key="item.designSkill">
                   {{ item.designSkill }}
                 </li>
               </ul>
@@ -135,15 +135,10 @@
                 針對人資、面試官以及面試者開發的內部管理系統，可以進行線上測驗、填寫各式表單以及確認面試者的狀態。
               </p>
               <p>
-                <span class="highlight"
-                  >在專案上主要負責繪製流程圖以及前端介面設計。</span
-                >
+                <span class="highlight">在專案上主要負責繪製流程圖以及前端介面設計。</span>
               </p>
               <p>
-                專案開發的流程為敏捷式開發，透過Scrum來進行團隊之間的分工與討論。<span
-                  class="highlight"
-                  >在團隊中扮演的角色為「溝通者」</span
-                >，在固定的時間討論當日要完成的目標，遇到困難時會互相協助、提供方法解決，並在空閒時間拿出來討論、交流，讓每一個人可以學習，了解自己著手以外的部分。
+                專案開發的流程為敏捷式開發，透過Scrum來進行團隊之間的分工與討論。<span class="highlight">在團隊中扮演的角色為「溝通者」</span>，在固定的時間討論當日要完成的目標，遇到困難時會互相協助、提供方法解決，並在空閒時間拿出來討論、交流，讓每一個人可以學習，了解自己著手以外的部分。
               </p>
             </div>
           </li>
@@ -202,24 +197,18 @@
       </div>
     </div>
   </div>
-
-  <!-- 頁尾區塊 -->
-  <Footer>
-    &copy; copyright 2021 by Wendy
-  </Footer>
 </template>
 
 <script>
 // @ is an alias to /src
-import Footer from "../components/Footer.vue";
 import CardList from '../components/CardList.vue';
 import Graphic from '../components/Graphic.vue';
 import ToggleButton from '../components/ToggleButton.vue';
 
-import { ref } from '@vue/reactivity';
+import { ref } from 'vue';
 
 export default {
-  components: { Graphic, CardList, Footer, ToggleButton },
+  components: { Graphic, CardList, ToggleButton },
   setup(){
     const programmingGraphicItem = [
       {
