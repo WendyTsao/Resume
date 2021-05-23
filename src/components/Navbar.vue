@@ -24,14 +24,14 @@ export default {
     ];
 
     const showMenu = ref(false);
-    const screenWidth = ref(window.screen.width);
+    const screenWidth = ref(document.body.offsetWidth);
 
     onMounted(() => {
       document.addEventListener('scroll', ()=> showMenu.value = false);
-      window.addEventListener('resize', ()=>  screenWidth.value = window.screen.width);
+      window.addEventListener('resize', ()=>  screenWidth.value = document.body.offsetWidth);
     });
 
-    const menubarStatus = computed(()=> screenWidth.value > 992 || showMenu.value );
+    const menubarStatus = computed(()=> screenWidth.value >= 992 || showMenu.value );
     const clickMenubar = ()=> showMenu.value = !showMenu.value;    
 
     return { navbarItems, menubarStatus, clickMenubar };
@@ -40,13 +40,12 @@ export default {
 </script>
 
 <style scoped>
-.show-menu{ 
-    height: 55px;
-    padding: 3px 0;
-}
-.hidden-menu{ 
-    height: 0;
-    padding: 0;
-}
-
+  .show-menu{ 
+      height: 55px;
+      padding: 3px 0;
+  }
+  .hidden-menu{ 
+      height: 0;
+      padding: 0;
+  }
 </style>
