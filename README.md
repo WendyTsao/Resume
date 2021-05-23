@@ -1,4 +1,6 @@
-# wendy_project
+# About Wendy | Resume
+
+## 💡 [DEMO](https://wendy-resume.herokuapp.com/)
 
 ## Project setup
 ```
