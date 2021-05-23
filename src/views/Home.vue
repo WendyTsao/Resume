@@ -2,39 +2,7 @@
   <!-- 圖片區塊 -->
   <div class="banner">
     <!-- 選單 -->
-    <div class="menubar">
-      <nav class="navbar navbar-expand-lg">
-        <div class="container justify-content-end">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <i class="fas fa-bars"></i>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="#about">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#skill">Skills</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#experience">Experience</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#portfolio">Portfolio</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </div>
+    <Navbar></Navbar>
     <div class="container">
       <div class="banner-text col-10 col-lg-8">
         <div class="upper">
@@ -45,9 +13,9 @@
           <p>TSAO YU HSUAN</p>
         </div>
       </div>
-      <a href="#about" class="rolldownbtn"
-        ><i class="fas fa-chevron-down"></i
-      ></a>
+      <a href="#about" class="rolldownbtn">
+        <i class="fas fa-chevron-down"></i>
+      </a>
     </div>
   </div>
 
@@ -201,6 +169,7 @@
 
 <script>
 // @ is an alias to /src
+import Navbar from '../components/Navbar.vue';
 import CardList from '../components/CardList.vue';
 import Graphic from '../components/Graphic.vue';
 import ToggleButton from '../components/ToggleButton.vue';
@@ -208,7 +177,7 @@ import ToggleButton from '../components/ToggleButton.vue';
 import { ref } from 'vue';
 
 export default {
-  components: { Graphic, CardList, ToggleButton },
+  components: { Navbar, Graphic, CardList, ToggleButton },
   setup(){
     const programmingGraphicItem = [
       {
