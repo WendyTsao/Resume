@@ -181,17 +181,20 @@ export default {
   setup(){
     const programmingGraphicItem = [
       {
-        imgUrl: "VuePracticeBootstrap.png",
+        link: "https://bootstrap-vue-portfolio.herokuapp.com/",
+        image: "VuePracticeBootstrap.png",
         title: "VUE PRACTICE",
         subTitle: "Bootstrap Theme",
       },
       {
-        imgUrl: "VuePractice5xRuby.png",
+        link: "https://vue-5xruby-website-practice.herokuapp.com/",
+        image: "VuePractice5xRuby.png",
         title: "VUE PRACTICE",
         subTitle: "五倍紅寶石官網",
       },
       {
-        imgUrl: "VuePracticeResume.png",
+        link: "https://wendy-resume.herokuapp.com/",
+        image: "VuePracticeResume.png",
         title: "VUE PRACTICE",
         subTitle: "Resume",
       }
@@ -199,32 +202,32 @@ export default {
     
     const designGraphicItem = [
       {
-        imgUrl: "DailyUIDesktop001.jpg",
+        image: "DailyUIDesktop001.jpg",
         title: "Daily UI 001",
         subTitle: "SIGN UP",
       },
       {
-        imgUrl: "DailyUIDesktop017.jpg",
+        image: "DailyUIDesktop017.jpg",
         title: "Daily UI 017",
         subTitle: "EMAIL RECEIPT",
       },
       {
-        imgUrl: "DailyUIDesktop025.jpg",
+        image: "DailyUIDesktop025.jpg",
         title: "Daily UI 025",
         subTitle: "TV APP",
       },
       {
-        imgUrl: "DailyUIMobile015.jpg",
+        image: "DailyUIMobile015.jpg",
         title: "Daily UI 015",
         subTitle: "ON/OFF SWITCH",
       },
       {
-        imgUrl: "DailyUIMobile023.jpg",
+        image: "DailyUIMobile023.jpg",
         title: "Daily UI 023",
         subTitle: "ONBOARDING",
       },
       {
-        imgUrl: "DailyUIMobile024.jpg",
+        image: "DailyUIMobile024.jpg",
         title: "Daily UI 024",
         subTitle: "BOARDING PASS",
       }

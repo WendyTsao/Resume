@@ -1,10 +1,11 @@
 <template>
   <div class="portfolio-item col-lg-4">
-    <img :src="require(`@/assets/pic/${content.imgUrl}`)" />
-    <div class="text">
+    <img :src="require(`@/assets/pic/${content.image}`)" />
+
+    <a class="text" :href="content.link">
       <h3>{{ content.title }}</h3>
       <h3>{{ content.subTitle }}</h3>
-    </div>
+    </a>
   </div>
 </template>
 

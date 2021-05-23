@@ -247,13 +247,13 @@ ul,li{
     bottom: 0;
     right: 0;
     left: 0;
-    padding: 20px;
     margin: 0 12px 30px;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
     opacity: 0;
     background: linear-gradient(-50deg, rgba(170, 195, 210, 0.9), rgba(80, 100, 130, 0.9));
     color: #fff;
