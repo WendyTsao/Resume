@@ -13,7 +13,7 @@
 export default {
   setup() {
     const portfolioLink = [
-      { iconLink: "https://hackmd.io/?nav=overview", iconClass: "fas fa-file-alt" },
+      { iconLink: "https://hackmd.io/@3J619VvHS0eCNYLkRHFxhA", iconClass: "fas fa-file-alt" },
       { iconLink: "https://github.com/WendyTsao", iconClass: "fab fa-github-alt" },
       { iconLink: "mailto:wendytsao84@gmail.com", iconClass: "fas fa-envelope" },
     ];
