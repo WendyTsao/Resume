@@ -1,12 +1,12 @@
 <template>
-  <div class="menubar">
+  <div ref="menu" class="menubar">
     <a class="menubarBtn" @click="clickMenubar">
       <i class="fas fa-bars"></i>
     </a>
-    
     <ul class="navBar">
-      <li v-for="item in navbarItems" :key="item.href" :class="['show-menu',{'hidden-menu':!menubarStatus}]"> 
-        <a class="navLink" :href="item.href">{{item.title}}</a>
+      <li v-for="item in navbarItems" :key="item.href" @click="scrollTo(item.href)"
+      :class="['show-menu',{'hidden-menu':!menubarStatus}]"> 
+        <a class="navLink">{{item.title}}</a>
       </li>
     </ul>
   </div>
@@ -23,18 +23,29 @@ export default {
       { href: "#portfolio", title: "Portfolio" },
     ];
 
+    // 模板引用:https://reurl.cc/dG55ng
+    const menu = ref(null);
     const showMenu = ref(false);
     const screenWidth = ref(document.body.offsetWidth);
+      // document.body.offsetWidth 指body的寬度
+    const isDesktop = computed(()=> screenWidth.value >= 992);
 
     onMounted(() => {
       document.addEventListener('scroll', ()=> showMenu.value = false);
       window.addEventListener('resize', ()=>  screenWidth.value = document.body.offsetWidth);
     });
 
-    const menubarStatus = computed(()=> screenWidth.value >= 992 || showMenu.value );
-    const clickMenubar = ()=> showMenu.value = !showMenu.value;    
+    const menubarStatus = computed(()=> isDesktop.value || showMenu.value );
+    const clickMenubar = ()=> showMenu.value = !showMenu.value;
 
-    return { navbarItems, menubarStatus, clickMenubar };
+    const scrollTo = (id)=>{
+      // offsetTop 取得頁面最高點，也就是0到about的top距離是多少
+      const top = document.querySelector(id).offsetTop;
+      const menuHeight = isDesktop.value ? 0 : menu.value.offsetHeight;
+      window.scrollTo(0, top - menuHeight)
+    };
+
+    return { navbarItems, menubarStatus, clickMenubar, scrollTo, menu };
   },
 };
 </script>
