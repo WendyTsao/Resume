@@ -153,7 +153,7 @@
         <div class="text">
           <h4>- 實作切版學習，靈活運用前端框架 -</h4>
         </div>
-        <div class="row">
+        <div class="row g-0 justify-content-center">
           <Graphic v-for="programmingGraphic in programmingGraphicItem" 
           :content="programmingGraphic"
           :key="programmingGraphic.imgUrl"></Graphic>
@@ -164,9 +164,9 @@
           <h4>- 嘗試繪製前端介面，享受設計的快樂 -</h4>
         </div>
         <div class="row">
-          <Graphic v-for="designGraphic in designGraphicItem" 
+          <!-- <Graphic v-for="designGraphic in designGraphicItem" 
           :content="designGraphic"
-          :key="designGraphic.imgUrl"></Graphic>
+          :key="designGraphic.imgUrl"></Graphic> -->
         </div>
       </div>
     </div>
@@ -188,21 +188,21 @@ export default {
     const programmingGraphicItem = [
       {
         link: "https://bootstrap-vue-portfolio.herokuapp.com/",
-        image: "VuePracticeBootstrap.png",
-        title: "VUE PRACTICE",
-        subTitle: "Bootstrap Theme",
+        image: "VuePracticeResume.png",
+        title: "About Wendy | Resume",
+        text: "下定決心從平面設計轉職成前端設計後就開始著手規劃此作品，主要內容為呈現個人專長、工作經驗以及相關前端設計的作品。本作品從版面設計、RWD切版、Vue專案建立到 Heroku 部署皆由本人獨立完成。",
       },
       {
         link: "https://vue-5xruby-website-practice.herokuapp.com/",
         image: "VuePractice5xRuby.png",
-        title: "VUE PRACTICE",
-        subTitle: "五倍紅寶石官網",
+        title: "About Wendy | Resume",
+        text: "獨立完成版面設計、RWD切版、Vue專案建立到 Heroku 部署。",
       },
       {
         link: "https://wendy-resume.herokuapp.com/",
         image: "VuePracticeResume.png",
-        title: "VUE PRACTICE",
-        subTitle: "Resume",
+        title: "About Wendy | Resume",
+        text: "獨立完成版面設計、RWD切版、Vue專案建立到 Heroku 部署。",
       }
     ];
     
