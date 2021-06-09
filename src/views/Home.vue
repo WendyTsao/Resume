@@ -29,32 +29,38 @@
         <div class="avatar">
           <img src="../assets/pic/wendy.png" />
         </div>
-        <div v-if="isShow" class="text personality d-flex flex-column">
-          <h4>勇於嘗試 • 挑戰自我</h4>
-          <p>
-            積極向上、獨立負責且勇於嘗試，<span class="highlight"
-              >「Try and do my best」</span
-            >是我從小對自己的期望，對於不熟悉的事物都會打破砂鍋問到底，從哪裡失敗就從哪裡站起來。
-          </p>
-          <p>
-            熱心公益、關心周遭瑣碎事物且心思縝密，善於溝通及團隊合作，喜歡從合作的過程中彼此交流對於事情不同的想法，並可在扮演不同角色中學習應對事情的不同角度。
-          </p>
-          <ToggleButton :title="'踏入前端世界的女孩做了什麼準備'"  @click="ContentToggle">
-            <template #icon-right>
-               <i class="far fa-hand-point-right"></i>
-            </template>
-          </ToggleButton>
-        </div>
-        <div v-else class="text study d-flex flex-column">
-            <h4>精進成長 • 學習不中斷</h4>
-            <p>下定決心從平面設計轉職成前端設計時，我就開始尋找相關實體/線上課程進修：學習基礎的網頁語法 - HTML、CSS、jQuery，實作切版畫面(含RWD)搭配網頁動畫以及靈活運用線上開源套件。
-            </p>
-            <p>除了課堂上的學習，我也會搭配線上教學影片自行練習，讓學習更有效率。目前也仍持續在學習前端框架 Vue 和 CSS切版等相關知識。</p>
-          <ToggleButton :title="'認識這個女孩'"  @click="ContentToggle">
-            <template #icon-right>
-              <i class="far fa-hand-point-left"></i>
-            </template>
-          </ToggleButton>
+        <div class="text">
+          <transition name="fade">
+            <div v-show="isBtn1 && btn2Disable" class="personality">
+              <h4>勇於嘗試 • 挑戰自我</h4>
+              <p>
+                積極向上、獨立負責且勇於嘗試，<span class="highlight"
+                  >「Try and do my best」</span
+                >是我從小對自己的期望，對於不熟悉的事物都會打破砂鍋問到底，從哪裡失敗就從哪裡站起來。
+              </p>
+              <p>
+                熱心公益、關心周遭瑣碎事物且心思縝密，善於溝通及團隊合作，喜歡從合作的過程中彼此交流對於事情不同的想法，並可在扮演不同角色中學習應對事情的不同角度。
+              </p>
+              <ToggleButton :title="'踏入前端世界的女孩做了什麼準備'"  @click="changeBtn('1')">
+                <template #icon-right>
+                    <i class="far fa-hand-point-right"></i>
+                </template>
+              </ToggleButton>
+            </div>
+          </transition>
+          <transition name="fade">
+            <div v-show="isBtn2 && btn1Disable" class="study">
+                <h4>精進成長 • 學習不中斷</h4>
+                <p>下定決心從平面設計轉職成前端設計時，我就開始尋找相關實體/線上課程進修：學習基礎的網頁語法 - HTML、CSS、jQuery，實作切版畫面(含RWD)搭配網頁動畫以及靈活運用線上開源套件。
+                </p>
+                <p>除了課堂上的學習，我也會搭配線上教學影片自行練習，讓學習更有效率。目前也仍持續在學習前端框架 Vue 和 CSS切版等相關知識。</p>
+              <ToggleButton :title="'認識這個女孩'"  @click="changeBtn('2')">
+                <template #icon-left>
+                  <i class="far fa-hand-point-left"></i>
+                </template>
+              </ToggleButton>
+            </div>
+          </transition>
         </div>
       </div>
     </div>
@@ -174,7 +180,7 @@ import CardList from '../components/CardList.vue';
 import Graphic from '../components/Graphic.vue';
 import ToggleButton from '../components/ToggleButton.vue';
 
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 
 export default {
   components: { Navbar, Graphic, CardList, ToggleButton },
@@ -248,12 +254,45 @@ export default {
       { designSkill: "InDesign" },
     ];
 
-    const isShow = ref(true);
-    const ContentToggle = ()=>{
-      isShow.value = !isShow.value
+    const currentBtn = ref('1');
+    const btn2Disable = ref(false);
+    const btn1Disable = ref(true);
+
+    const isBtn1 = computed(()=> currentBtn.value === '2');
+    const isBtn2 = computed(()=> currentBtn.value === '1');
+
+    const changeBtn = btnName => {
+      currentBtn.value = btnName;
+      const time = setTimeout(() => {
+        btn2Disable.value = isBtn1.value;
+        btn1Disable.value = isBtn2.value;
+      }, 600);
     }
 
-    return { programmingGraphicItem, designGraphicItem, skillProgrammingItems, skillDesignItems, isShow, ContentToggle };
+    return { 
+      programmingGraphicItem, 
+      designGraphicItem, 
+      skillProgrammingItems, 
+      skillDesignItems, 
+      currentBtn, btn1Disable, btn2Disable, isBtn1, isBtn2, changeBtn,
+    };
   }
 };
 </script>
+
+<style scoped>
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity .5s;
+  }
+
+  .fade-enter-from,
+  .fade-leave-to {
+    opacity: 0;
+  }
+
+  .fade-enter-to,
+  .fade-leave-from {
+    opacity: 1;
+  }
+</style>

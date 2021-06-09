@@ -157,14 +157,11 @@ ul,li{
 .rolldownbtn i{
     font-size: 30px;
     color: #fff;
-    animation: pulse 2s infinite;
+    animation: pulse-vertical 2s infinite;
 }
 
 /* 關於我 */
-.about .avatar{
-    flex: 1;
-    display: flex;
-    justify-content: center;
+.about .content{
     align-items: center;
 }
 
@@ -174,12 +171,12 @@ ul,li{
 }
 
 .about .text{
-    flex: 2;
     margin-top: 20px;
 }
 
 .tag{
     text-align: center;
+    animation: pulse-horizontal 1s infinite;
 }
 
 .tag .badge{
@@ -294,7 +291,7 @@ ul,li{
     border-top: 1px solid #92A8D1;
 }
 
-@keyframes pulse {
+@keyframes pulse-vertical {
     0%{
         transform: translate(0, 0);
     }
@@ -305,6 +302,18 @@ ul,li{
         transform: translate(0, 0);
     }
 }
+@keyframes pulse-horizontal {
+    0%{
+        transform: translate(0, 0);
+    }
+    50%{
+        transform: translate(10px, 0);
+    }
+    100%{
+        transform: translate(0, 0);
+    }
+}
+
 
 @media screen and (min-width: 992px) {  
     /* 共用CSS */
@@ -383,15 +392,15 @@ ul,li{
     }
 
     /* 關於我 */
+    .about .avatar{
+        flex: 1;
+    }
+    
     .about .text{
+        flex: 2;
         margin: 0 70px;
     }    
 
-    .about .avatar{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
     .tag{
         text-align: right;
     }
