@@ -31,7 +31,7 @@
         </div>
         <div class="text">
           <transition name="fade">
-            <div v-show="isBtn1 && btn2Disable" class="personality">
+            <div v-show="isBtn2 && btn1Disable" class="personality">
               <h4>勇於嘗試 • 挑戰自我</h4>
               <p>
                 積極向上、獨立負責且勇於嘗試，<span class="highlight"
@@ -49,7 +49,7 @@
             </div>
           </transition>
           <transition name="fade">
-            <div v-show="isBtn2 && btn1Disable" class="study">
+            <div v-show="isBtn1 && btn2Disable" class="study">
                 <h4>精進成長 • 學習不中斷</h4>
                 <p>下定決心從平面設計轉職成前端設計時，我就開始尋找相關實體/線上課程進修：學習基礎的網頁語法 - HTML、CSS、jQuery，實作切版畫面(含RWD)搭配網頁動畫以及靈活運用線上開源套件。
                 </p>
@@ -254,12 +254,12 @@ export default {
       { designSkill: "InDesign" },
     ];
 
-    const currentBtn = ref('1');
+    const currentBtn = ref('2');
     const btn2Disable = ref(false);
     const btn1Disable = ref(true);
 
-    const isBtn1 = computed(()=> currentBtn.value === '2');
-    const isBtn2 = computed(()=> currentBtn.value === '1');
+    const isBtn1 = computed(()=> currentBtn.value === '1');
+    const isBtn2 = computed(()=> currentBtn.value === '2');
 
     const changeBtn = btnName => {
       currentBtn.value = btnName;
