@@ -172,6 +172,7 @@ ul,li{
 
 .about .text{
     margin-top: 20px;
+    height: 370px;
 }
 
 .tag{
@@ -397,10 +398,13 @@ ul,li{
     }
     
     .about .text{
+        display: flex;
+        align-items: center;
         flex: 2;
         margin: 0 70px;
+        height: 300px;
     }    
-
+    
     .tag{
         text-align: right;
     }
