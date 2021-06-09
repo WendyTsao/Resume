@@ -71,14 +71,14 @@
     <div class="container">
       <div class="content col-10 mx-auto">
         <div class="row py-5">
-          <CardList :title="'PROGRAMMING'">
+          <CardList data-aos="zoom-in" :title="'PROGRAMMING'">
               <ul class="d-flex flex-wrap">
                 <li v-for="item in skillProgrammingItems" class="skill-list" :key="item.programmingSkill">
                   {{ item.programmingSkill }}
                 </li>
               </ul>
           </CardList>
-          <CardList :title="'DESIGN'">
+          <CardList data-aos="zoom-in" data-aos-delay="500" :title="'DESIGN'">
               <ul class="d-flex flex-column align-items-center">
                 <li v-for="item in skillDesignItems" class="skill-list" :key="item.designSkill">
                   {{ item.designSkill }}
@@ -99,7 +99,7 @@
       <div class="content col-10 col-lg-12 mx-auto">
         <ul class="timeline">
           <li>
-            <div class="text">
+            <div class="text" data-aos="fade-left">
               <span class="badge rounded-pill">
                 <i class="fas fa-briefcase"></i>
                 2016 July. - Aug.
@@ -117,7 +117,7 @@
             </div>
           </li>
           <li>
-            <div class="text">
+            <div class="text" data-aos="fade-left" data-aos-delay="500" >
               <span class="badge rounded-pill">
                 <i class="fas fa-briefcase"></i>
                 2017 July. - 2021 Mar.
