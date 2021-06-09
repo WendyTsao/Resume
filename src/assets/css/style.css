@@ -1,3 +1,7 @@
+html,body{
+    overflow-x: hidden;
+}
+
 /* 共用CSS */
 .area-space{
     margin: 20px 0;
