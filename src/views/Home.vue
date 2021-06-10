@@ -99,7 +99,7 @@
       <div class="content col-10 col-lg-12 mx-auto">
         <ul class="timeline">
           <li>
-            <div class="text" data-aos="fade-left">
+            <div class="text">
               <span class="badge rounded-pill">
                 <i class="fas fa-briefcase"></i>
                 2016 July. - Aug.
@@ -117,7 +117,7 @@
             </div>
           </li>
           <li>
-            <div class="text" data-aos="fade-left" data-aos-delay="500" >
+            <div class="text">
               <span class="badge rounded-pill">
                 <i class="fas fa-briefcase"></i>
                 2017 July. - 2021 Mar.

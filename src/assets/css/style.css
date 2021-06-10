@@ -220,7 +220,8 @@ ul,li{
 .experience .badge{
     font-size: .5rem;
     font-weight: 300;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    transition: .3s all ease-in-out;
 }
 
 .experience .badge i{
@@ -424,18 +425,7 @@ ul,li{
     .tag{
         text-align: right;
     }
-    
-    .tag .badge{
-        transform: translateX(0);
-    }
-    
-    .personality .tag .badge:hover{
-        transform: translateX(20px);
-    } 
-    .study .tag .badge:hover{
-        transform: translateX(-20px);
-    }
-    
+        
     /* 工作經歷 */
     .timeline{
         display: flex;
@@ -445,6 +435,9 @@ ul,li{
         width: 50%;
         padding: 20px;
     }
-    
-    
+
+    .timeline li:hover .badge {
+        background-color: #ED83A2;
+        animation: pulse-vertical 1s infinite;
+    }
 }
