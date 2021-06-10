@@ -153,7 +153,7 @@
         <div class="text">
           <h4>- 實作切版學習，靈活運用前端框架 -</h4>
         </div>
-        <div class="row g-0 justify-content-center">
+        <div class="row g-0">
           <Graphic v-for="programmingGraphic in programmingGraphicItem" 
           :content="programmingGraphic"
           :key="programmingGraphic.imgUrl"></Graphic>
@@ -164,9 +164,9 @@
           <h4>- 嘗試繪製前端介面，享受設計的快樂 -</h4>
         </div>
         <div class="row">
-          <!-- <Graphic v-for="designGraphic in designGraphicItem" 
+          <Graphic v-for="designGraphic in designGraphicItem" 
           :content="designGraphic"
-          :key="designGraphic.imgUrl"></Graphic> -->
+          :key="designGraphic.imgUrl"></Graphic>
         </div>
       </div>
     </div>
@@ -187,55 +187,49 @@ export default {
   setup(){
     const programmingGraphicItem = [
       {
-        link: "https://bootstrap-vue-portfolio.herokuapp.com/",
+        link: "https://wendy-resume.herokuapp.com/",
         image: "VuePracticeResume.png",
         title: "About Wendy | Resume",
-        text: "下定決心從平面設計轉職成前端設計後就開始著手規劃此作品，主要內容為呈現個人專長、工作經驗以及相關前端設計的作品。本作品從版面設計、RWD切版、Vue專案建立到 Heroku 部署皆由本人獨立完成。",
+        text: "HTML | CSS | Bootstrap5 | Github | Vue3 | Heroku",
+      },
+      {
+        link: "https://bootstrap-vue-portfolio.herokuapp.com/",
+        image: "VuePracticeBootstrap.png",
+        title: "Bootstrap Theme | VUE PRACTICE",
+        text: "HTML | CSS | Bootstrap5 | Github | Vue3 | Heroku",
       },
       {
         link: "https://vue-5xruby-website-practice.herokuapp.com/",
         image: "VuePractice5xRuby.png",
-        title: "About Wendy | Resume",
-        text: "獨立完成版面設計、RWD切版、Vue專案建立到 Heroku 部署。",
-      },
-      {
-        link: "https://wendy-resume.herokuapp.com/",
-        image: "VuePracticeResume.png",
-        title: "About Wendy | Resume",
-        text: "獨立完成版面設計、RWD切版、Vue專案建立到 Heroku 部署。",
+        title: "5xruby Website | VUE PRACTICE",
+        text: "HTML | CSS | Bootstrap4 | Github | Vue2 | Heroku",
       }
     ];
     
     const designGraphicItem = [
       {
         image: "DailyUIDesktop001.jpg",
-        title: "Daily UI 001",
-        subTitle: "SIGN UP",
+        title: "Daily UI 001-SIGN UP"
       },
       {
         image: "DailyUIDesktop017.jpg",
-        title: "Daily UI 017",
-        subTitle: "EMAIL RECEIPT",
+        title: "Daily UI 017-EMAIL RECEIPT"
       },
       {
         image: "DailyUIDesktop025.jpg",
-        title: "Daily UI 025",
-        subTitle: "TV APP",
+        title: "Daily UI 025-TV APP"
       },
       {
         image: "DailyUIMobile015.jpg",
-        title: "Daily UI 015",
-        subTitle: "ON/OFF SWITCH",
+        title: "Daily UI 015-ON/OFF SWITCH"
       },
       {
         image: "DailyUIMobile023.jpg",
-        title: "Daily UI 023",
-        subTitle: "ONBOARDING",
+        title: "Daily UI 023-ONBOARDING"
       },
       {
         image: "DailyUIMobile024.jpg",
-        title: "Daily UI 024",
-        subTitle: "BOARDING PASS",
+        title: "Daily UI 024-BOARDING PASS"
       }
     ];
 
