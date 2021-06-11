@@ -156,7 +156,11 @@
         <div class="row g-0">
           <Graphic v-for="programmingGraphic in programmingGraphicItem" 
           :content="programmingGraphic"
-          :key="programmingGraphic.imgUrl"></Graphic>
+          :key="programmingGraphic.imgUrl">
+            <template #link>
+              <a :href="programmingGraphic.link" target="_blank" class="btn">Check Out</a>
+            </template>
+          </Graphic>
         </div>
       </div>
       <div class="portfolio-design">

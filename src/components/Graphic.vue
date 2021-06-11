@@ -1,9 +1,10 @@
 <template>
   <div class="item col-lg-4">
     <div class="pic">
-      <a :href="content.link"  target="_blank" >
+      <a :href="content.link" target="_blank">
         <img :src="require(`@/assets/pic/${content.image}`)" />
       </a>
+      <slot name="link"></slot>
     </div>
     <div class="text">
       <h4>{{ content.title }}</h4>

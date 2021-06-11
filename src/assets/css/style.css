@@ -243,6 +243,7 @@ ul,li{
     border-radius: 5px;
     transition: .3s all ease-in-out;
     transform: translateY(0);
+    position: relative;
 }
 
 .item:hover .pic{
@@ -271,6 +272,24 @@ ul,li{
     height: 100%;
     object-fit: cover;
     /* 讓圖片與容器一樣大 */
+}
+
+.item .btn{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #fff;
+    background-color: #92A8D1;
+    transition: .3s all ease-in-out;
+    opacity: 0;
+}
+
+.item .btn:hover{
+    background-color: #5578aa;
+}
+
+.item:hover .btn{
+    opacity: 1;
 }
 
 .item .text {
