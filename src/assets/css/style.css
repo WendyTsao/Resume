@@ -1,5 +1,6 @@
 html,body{
     overflow-x: hidden;
+    font-family: 'Lato', sans-serif;
 }
 
 /* 共用CSS */
@@ -7,12 +8,11 @@ html,body{
     margin: 20px 0;
 }
 
-
 ul,li{
     list-style: none;
     padding: 0;
     margin: 0;
-    font-weight: 300;
+    font-weight: 500;
 }
 
 .title{
@@ -32,6 +32,7 @@ ul,li{
 
 .text h4{
     font-size: 1.2rem;
+    font-weight: 400;
     color: #92A8D1;
     margin-bottom: 1.3rem;
 }
@@ -53,7 +54,6 @@ ul,li{
 /* 選單 */
 .banner{
     position: relative;
-    width: 100%;
     height: 546px;
     background: linear-gradient(-50deg, #ED83A2, #73C0F4);
 }
@@ -114,48 +114,31 @@ ul,li{
 
 /* 圖片區塊 */
 .banner-text {
-    height: 250px;
     position: absolute;
-    top: 46px;
+    top: 60px;
     right: 0;
     bottom: 0;
     left: 0;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
 }
 
-.banner-text .upper p{
-    color: #fff;
-    font-size: 54px;
+.banner-text h1{
+    margin: 0 0 10px 0;
+    font-style: italic;
     font-weight: 700;
-    text-align: center;
-    position: relative;
+    letter-spacing: 5px;
 }
 
-.banner-text .upper p::after {
-    content: "";
-    position: absolute;
-    width: 90%;
-    border-bottom: 5px double #fff;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    margin: auto;
-}
-
-.banner-text .down{
-    color: #fff;
-    font-size: 2rem;
-    font-weight: 300;
-    padding: 0 5%;
-}
-
-.rolldownbtn{
-    position: absolute;
-    text-align: center;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    margin: 40px auto;
+.banner-text p{
+    font-weight: 400;
+    letter-spacing: 5px;
+    padding: 0 10px;
 }
 
 .rolldownbtn i{
@@ -366,6 +349,10 @@ ul,li{
     .banner{
         height: 100vh;
     }
+
+    .banner-text h1{
+        font-size: 4rem;
+    }
     
     /* 選單 */  
     .menubar{
@@ -400,33 +387,6 @@ ul,li{
         transform: translateY(-3px);
         transition: .3s;
     }   
-
-    /* 圖片區塊 */    
-    .banner-text {
-        height: 50vh;
-    }
-    
-    .banner-text .upper p{
-        font-size: 110px;
-        letter-spacing: 10px;
-        padding-top: 30px;
-        margin-bottom: 10px;
-    }
-
-    .banner-text .upper p::after {
-        width: 86%;
-    }
-
-    .banner-text .down{
-        font-size: 1.5rem;
-        display: flex;
-        justify-content: space-between;
-        padding: 0 7%;
-    }
-    
-    .rolldownbtn i{
-        font-size: 45px;
-    }
 
     /* 關於我 */
     .about .avatar{

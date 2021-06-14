@@ -4,6 +4,15 @@
     <!-- 選單 -->
     <Navbar></Navbar>
     <div class="container">
+      <div class="banner-text">
+        <h1>YU HSUAN TSAO</h1>
+        <p>UI Design | Web Design | Front End Design</p>
+        <a href="#about" class="rolldownbtn">
+          <i class="fas fa-chevron-down"></i>
+        </a>
+      </div>
+    </div>
+    <!-- <div class="container">
       <div class="banner-text col-10 col-lg-8">
         <div class="upper">
           <p>PORTFOLIO.</p>
@@ -16,7 +25,7 @@
       <a href="#about" class="rolldownbtn">
         <i class="fas fa-chevron-down"></i>
       </a>
-    </div>
+    </div> -->
   </div>
 
   <!-- 關於我 -->
