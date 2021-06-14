@@ -12,20 +12,6 @@
         </a>
       </div>
     </div>
-    <!-- <div class="container">
-      <div class="banner-text col-10 col-lg-8">
-        <div class="upper">
-          <p>PORTFOLIO.</p>
-        </div>
-        <div class="down">
-          <p>Create by</p>
-          <p>TSAO YU HSUAN</p>
-        </div>
-      </div>
-      <a href="#about" class="rolldownbtn">
-        <i class="fas fa-chevron-down"></i>
-      </a>
-    </div> -->
   </div>
 
   <!-- 關於我 -->
@@ -34,7 +20,7 @@
       <div class="title">
         <h2>ABOUT ME</h2>
       </div>
-      <div class="content d-lg-flex col-10 mx-auto">
+      <div class="content d-md-flex col-10 mx-auto">
         <div class="avatar">
           <img src="../assets/pic/wendy.png" />
         </div>
