@@ -1,7 +1,7 @@
 <template>
   <div class="item col-lg-4">
     <div class="pic">
-      <a :href="content.link" target="_blank">
+      <a :href="content.link" :target="/^http(s?):*?/.test(content.link) ? '_blank' : ''">
         <img :src="require(`@/assets/pic/${content.image}`)" />
       </a>
       <slot name="link"></slot>

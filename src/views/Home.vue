@@ -3,7 +3,7 @@
   <div class="banner">
     <!-- 選單 -->
     <Navbar></Navbar>
-    <div class="container">
+    <div class="container" id="top">
       <div class="banner-text">
         <h1>YU HSUAN TSAO</h1>
         <p>UI Design | Web Design | Front End Design</p>
@@ -153,7 +153,12 @@
           :content="programmingGraphic"
           :key="programmingGraphic.imgUrl">
             <template #link>
-              <a :href="programmingGraphic.link" target="_blank" class="btn">Check Out</a>
+              <a 
+                :href="programmingGraphic.link" 
+                :target="/^http(s?):*?/.test(programmingGraphic.link) ? '_blank' : ''" 
+                class="btn">
+                Check Out
+              </a>
             </template>
           </Graphic>
         </div>
@@ -186,22 +191,22 @@ export default {
   setup(){
     const programmingGraphicItem = [
       {
-        link: "https://wendy-resume.herokuapp.com/",
+        link: "#top",
         image: "VuePracticeResume.png",
         title: "About Wendy | Resume",
-        text: "HTML | CSS | Bootstrap5 | Github | Vue3 | Heroku",
+        text: "HTML | CSS | Bootstrap5 | Github | Vue3",
       },
       {
-        link: "https://bootstrap-vue-portfolio.herokuapp.com/",
+        link: "https://github.com/WendyTsao/vue-bootstrap-theme",
         image: "VuePracticeBootstrap.png",
-        title: "Bootstrap Theme | VUE PRACTICE",
-        text: "HTML | CSS | Bootstrap5 | Github | Vue3 | Heroku",
+        title: "Bootstrap Theme | Practice",
+        text: "HTML | CSS | Bootstrap5 | Github | Vue3",
       },
       {
-        link: "https://vue-5xruby-website-practice.herokuapp.com/",
+        link: "https://github.com/WendyTsao/vue-5xruby-website",
         image: "VuePractice5xRuby.png",
-        title: "5xruby Website | VUE PRACTICE",
-        text: "HTML | CSS | Bootstrap4 | Github | Vue2 | Heroku",
+        title: "5xruby Website | Practice",
+        text: "HTML | CSS | Bootstrap4 | Github | Vue2",
       }
     ];
     
