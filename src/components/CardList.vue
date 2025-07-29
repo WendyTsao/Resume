@@ -1,6 +1,6 @@
 <template>
-  <div class="col-sm-6">
-    <div class="card">
+  <div class="col-sm-4">
+    <div class="card h-100">
       <div class="card-body text">
         <h4>{{ title }}</h4>
         <slot></slot>

@@ -3,9 +3,8 @@
     <a class="menubarBtn" @click="clickMenubar">
       <i class="fas fa-bars"></i>
     </a>
-    <ul class="navBar">
-      <li v-for="item in navbarItems" :key="item.href" @click="scrollTo(item.href)"
-      :class="['show-menu',{'hidden-menu':!menubarStatus}]"> 
+    <ul :class="['navBar',{'show-menu':menubarStatus},{'hidden-menu':!menubarStatus}]">
+      <li v-for="item in navbarItems" :key="item.href" @click="scrollTo(item.href)"> 
         <a class="navLink">{{item.title}}</a>
       </li>
     </ul>
@@ -52,11 +51,16 @@ export default {
 
 <style scoped>
   .show-menu{ 
-      height: 55px;
+      height: 220px;
       padding: 3px 0;
   }
   .hidden-menu{ 
       height: 0;
       padding: 0;
   }
+@media screen and (min-width: 992px) {  
+  .show-menu{ 
+      height: 55px;
+  }
+}
 </style>

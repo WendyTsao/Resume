@@ -87,8 +87,9 @@ ul,li{
     background-color: #fff;
     z-index: 2;
     width: 100%;
-    position: fixed;
+    position: sticky;
     top: 60px;
+    overflow: hidden;
 }
 
 .navBar li{
@@ -96,7 +97,6 @@ ul,li{
     height: 55px;
     padding: 3px 0;
     text-align: center;
-    overflow: hidden;
     transition: .5s ease;
 }
 
@@ -162,8 +162,8 @@ ul,li{
     height: 400px;
 }
 
-.tag{
-    text-align: center;
+.tag {
+    margin: 10px 0;
     animation: pulse-horizontal 1s infinite;
 }
 
@@ -190,13 +190,7 @@ ul,li{
     backdrop-filter: blur(5px);
     box-shadow: 0 .2rem 1rem #92A8D1;
     text-align: center;
-    margin: 10px 0;
     border: none;
-}
-
-.skills .skill-list{
-    width: 50%;
-    padding: 5px 0;
 }
 
 /* 工作經歷 */
@@ -210,6 +204,16 @@ ul,li{
 .experience .badge i{
     padding-right: 5px;
 }
+
+.timeline:hover .badge {
+    background-color: #ED83A2;
+    animation: pulse-vertical 1s infinite;
+}
+
+.timeline ul, li, p{
+    font-weight: 300;
+    margin: 5px 10px;
+}    
 
 /* 作品集 */
 .portfolio .item {
@@ -394,29 +398,21 @@ ul,li{
     }
     
     .about .text{
+        position: relative;
         display: flex;
         align-items: center;
         flex: 2;
         margin: 0 70px;
         height: 300px;
-    }    
-    
-    .tag{
-        text-align: right;
     }
-        
-    /* 工作經歷 */
-    .timeline{
-        display: flex;
-    }
-    
-    .timeline li {
-        width: 50%;
-        padding: 20px;
+    .text .block {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
     }
 
-    .timeline li:hover .badge {
-        background-color: #ED83A2;
-        animation: pulse-vertical 1s infinite;
-    }
+    .tag {
+        text-align: right;
+    }    
 }

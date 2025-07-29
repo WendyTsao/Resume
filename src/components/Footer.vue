@@ -1,11 +1,11 @@
 <template>
   <div class="container-fluid footer">
-    &copy; copyright 2021 by Wendy
-    <div class="portfolioLink">
+    &copy; copyright 2025 by Wendy
+    <!-- <div class="portfolioLink">
       <a v-for="link in portfolioLink" :key="link.iconLink" :href="link.iconLink" >
         <i :class="link.iconClass"></i>
       </a>
-    </div>
+    </div> -->
   </div>
 </template>
 
