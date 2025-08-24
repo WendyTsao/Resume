@@ -22,7 +22,7 @@
       </div>
       <div class="content d-md-flex col-10 mx-auto">
         <div class="avatar">
-          <img src="../assets/pic/wendy.png" />
+          <img src="/assets/pic/wendy.png" />
         </div>
         <div class="text">
           <transition name="fade" mode="out-in">
@@ -47,10 +47,10 @@
             <div v-if="currentBtn === '3'" class="block">
                 <h4>自主學習 • 精進成長 </h4>
                 <p>
-                  下定決心從平面設計轉職至前端開發時，我就開始透過實體與線上課程學習 HTML、CSS、jQuery 等語法與切版技術，搭配開源套件完成互動頁面與 RWD 設計，也透過實作專案逐步接觸開發流程、版本控管與 UI 邏輯。
+                  下定決心從平面設計轉職前端後，我投入課程學習 HTML、CSS、JavaScript，並進一步探索 Vue、React 等框架，搭配開源套件完成互動頁面與 RWD 設計。也透過案實作熟悉開發流程、版本控管與 UI 邏輯。
                 </p>
                 <p>
-                  這段跨領域的經歷不僅打下了技術基礎，也讓我熟悉與開發與設計之間的語言與合作方式，成為我後來轉職產品經理的養分。
+                  這段經歷不僅奠定了技術基礎，也讓我理解設計與開發的協作方式，成為我後來轉職產品經理的養分。
                 </p>
               <ToggleButton :title="'現在，我是一位產品經理'"  @click="changeBtn('1')">
                 <template #icon-right>
@@ -63,9 +63,9 @@
             <div v-if="currentBtn === '1'" class="block">
                 <h4> PM 視角 • 流程與決策</h4>
                 <p>
-                  轉職為PM後，開始更深入理解「一個產品如何從構想到落地」的每個環節。從競品分析、市場調查到用戶需求釐清，獨立擬定產品定位與核心目標，規劃功能模組與使用流程設計，並擔任協調團隊的角色、拆解任務與追蹤進度。
+                  轉職 PM 後，我深入理解「一個產品如何從構想到落地」的每個環節，涵蓋競品分析、市場調查、需求釐清、產品定位、功能規劃與流程設計，並負責跨部門協作、任務拆解與進度追蹤。
                 </p>
-                <p>希望持續精進產品管理技能，從使用者需求、產品規劃到跨部門協作，優化自己在實務流程中的理解與判斷力。</p>
+                <p>期望持續精進產品管理能力，優化在需求洞察、規劃與協作上的判斷力。</p>
               <ToggleButton :title="'成為PM前，我是這樣的人'"  @click="changeBtn('2')">
                 <template #icon-left>
                   <i class="far fa-hand-point-left"></i>
